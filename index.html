@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- ※「！」を押してエンターを押すとセットが出てくる※ -->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>WebDesign</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+
+    <!-- ※LynｋでどのＣＳＳを読み込むか設定する※ -->
+    <!-- ※リセットCSSはスタイルCSSより上に書く※ -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body id="top">
+    <!-- [dibでグループ化] -->
+    <!-- クラス名は数字から始まるのはNG、英数字のみ -->
+    <div class="container">
+        <header>
+            <!-- ※コメント入れたい場合は、「control」+「／」を入れると表示されない※ -->
+            <!-- ※サイト名は大見出し（ｈ1）を設定する。※ -->
+            <!-- ※自動保存だけど保存したタイミングでコードがきれいになる　「control」+「S」※ -->
+            <!-- ※囲みたい文字を選択して。「Alt」+「W」で選択範囲を囲むことができる（（候補はでてこない））※ -->
+            <!-- ※「control」+「スペース」でタグを間違えた場合は候補が出てくる※ -->
+            <!-- ※行の入れ替え「Alt」「⇅矢印キー」※ -->
+            <!-- ※「shift」+「矢印」で行選択l※ -->
+            <!-- ※「Alt]+「tab」ブラウザ切り替え※ -->
+            <!-- ※ リンクは文字を選択して、「Alt」+「W」→「a」→””の中は「control」+「スペース」でリンク出す　リンク先未定の場合は「＃」を入れておく-->
+            <h1><a href="index.html">WebDesign</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="next.html">下層ページの構成</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ［メインビジュアル］ -->
+        <!-- ※imgタグを使用するときは、山かっこを入れないで直接「img」といれる※ -->
+        <!-- ※ファイル選択は候補を必ず出すこと！！！　候補を出す時「control」+「スペース」※ -->
+        <!-- ※画像にも原稿としての意味（タグ）をつける→不明なものは「ｐ」をつける※ -->
+        <p class="visual"><img src="img/web.jpg" alt="Webページ制作言語"></p>
+
+        <main>
+            <section>
+                <h2>TOPページの見出し</h2>
+                <p>TOPページの大見出し（h1）はサイト名に設定するので、mainタグ内は中見出し（h2）から使い始める。</p>
+            </section>
+            <section>
+                <h2>セクションとは</h2>
+                <p>見出しとその内容は、sectionタグでグループ化する。小見出しがある場合、中見出し（h2）のsectionの中に小見出し（h3）のsectionが入ることもある。</p>
+            </section>
+            <!-- ※単発の文章にはセクションはいらない※ -->
+            <aside>
+                <p>バナーや注意書き、サイドバーなどの補足情報はasideで囲む。</p>
+            </aside>
+        </main>
+    </div>
+
+    <footer>
+        <p class="pagetop"><a href="#top"><img src="img/gotop.svg" width="32" alt="ページトップへ"></a></p>
+        <p class="copyright">
+            <small>
+                &copy;2021 WebDesign.
+                <span>All Rights Reserved.</span>
+                <!-- 文字だけをグループ化（divタグの改行しない版） -->
+            </small>
+        </p>
+        <!-- ※©を変えるとき→選択して右クリック→コマンドパレット→「ｈｔｍｌ」と入力してエンター※ -->
+        <!-- ※「ｐ」の中に「small」を入れる！！！※ -->
+    </footer>
+</body>
+</html>

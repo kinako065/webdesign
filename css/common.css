@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Moirai+One&display=swap");
+/* 自動スクロール */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*［bodyの書式］文字色:濃いグレー、文字サイズ:16px、書体:游ゴシック体、背景色:ベージュ */
+/* ボディーに設定する書式は、テキストのデフォルトの書式 */
+/* テキストの書式を親に設定すれば、子にも反映される */
+/* 背景色「白」に文字色「黒」だとコントラストが強すぎて目に負担かかるため、文字色を「グレー」にしてあげるといい。 */
+/* タグはグループ化できる（HYMLでdibタグをつける） */
+body {
+  color: #333;
+  font-size: 16px;
+  font-family: "Yu Gothic Medium", YuGothic, sans-serif;
+  background-color: beige;
+}
+
+/*［リンク文字の書式］文字色：親と同じ、下線なし → body書式の下へ移動、WebDesignにリンクを設定 */
+
+a {
+  color: inherit;
+  /* aタグは文字色を持っている */
+  /* inheritは親と同じにする */
+  text-decoration: none;
+  /* 下線はnoneで消せる */
+  transition: 0.5s;
+}
+
+/* マテリアルiconｓの設定 */
+[class^="material-"] {
+  font-size: inherit;
+  vertical-align: -0.1em;
+}
+
+/*［class="container"の書式］背景色:白、幅:980px、中央配置、内側左右余白:20px */
+/* HTMLのクラスは「.」で出てくる */
+.container {
+  background-color: #fff;
+  max-width: 980px;
+  /* 幅を短くする */
+  /* maxをつけると最大になる */
+  margin-left: auto;
+  /* 左余白自動 */
+  margin-right: auto;
+  /* 右余白自動 */
+  padding-left: 20px;
+  padding-right: 20px;
+  /* 左右の内側余白 */
+}
+
+/*［WebDesignの書式］
+背景色:青、文字色:白、中央揃え、余白:30px
+→文字サイズ:30px、太字
+→外側下余白:20px */
+
+header h1 {
+  font-family: "Moirai One", cursive;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* 青い四角の下の余白 */
+}
+
+/*［メニューの書式］上下ボーダー（線幅:2px、線種:直線、線カラー:任意）、外側下余白:20px、中央揃え、内側上下余白:15px */
+
+nav {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: brown;
+  /* 3行で書いても、1行で書いてもいいが、自分の書き方を統一する */
+  border-bottom: 2px solid brown;
+  /* 大きさ、種類、色は順不同 */
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: sticky;
+  top: 0;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  z-index: 1;
+  /*［メニュー項目の書式］１行で表示、隣との間:20px */
+
+  & li {
+    display: inline;
+    /* inlineは改行しないtabなので、横1行に並べる(行じゃなくなった「text-align: center」は行ではなくなったので適用されない;） */
+    padding-left: 10px;
+    padding-right: 10px;
+    /* 左右に半分ずつ設定することで片側に寄らないようにする */
+
+    /*［メニューのリンク文字のホバー設定］下線表示、不透明度:70% */
+    /* aタグの下の設定はいつでもつけてあげたほうがいい */
+    & ahover {
+      /* 「：hover」はマウスオーバーと同じ */
+      text-decoration: underline;
+      opacity: 0.7;
+      /* opacityは不透明度、0～1で設定する */
+    }
+
+    /*［HOMEの書式］太字 */
+    & a.active {
+      font-weight: bold;
+    }
+    /* 「active」「current」 */
+  }
+}
+
+/*［mainの書式］下余白:30px */
+main {
+  padding-bottom: 30px;
+}
+
+/*［大見出しの書式］文字色:黒、文字サイズ:20px、太字、背景画像:h1_bg.jpg、行の高さ:80px、背景画像サイズ:カバー、背景画像位置:中央、内側左余白:30px、外側下余白:30px */
+main article h1 {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  background-image: url(../img/h1_bg.jpg);
+  line-height: 80px;
+  /* 1行しかない時にline-heightを設定すれば、上下ど真ん中に文字が来る */
+  background-size: cover;
+  /* coverは覆う　縦横比固定で拡大縮小する（勝手にトリミングされる） */
+  background-position: center;
+  /* 背景画像の表示位置をセンターへ変更 */
+  padding-left: 30px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 2px #fff;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  /* height: 50px; */
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+/* パーツの高さは見るデバイスによって変わってしまうため基本的には設定しない(上余白と下余白を設定すれば使用しなくても同じになる */
+/* よって「height」はほとんど使用しない */
+
+/*［ページトップ］固定配置、右:12px、下:9px */
+footer p.pagetop {
+  position: fixed;
+  right: 12px;
+  bottom: 9px;
+}
+
+/* 不透明度:0.7 */
+footer p.pagetop a:hover {
+  opacity: 0.7;
+}
+
+/*［著作権］幅:980px、中央配置、右揃え */
+footer p.copyright {
+  max-width: 980px;
+  width: 85%;
+  /* 親の幅に対して余白 */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+
+/* レスポンシブ（モバイルの設定） */
+@media (max-width: 767px) {
+  header h1 {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  nav {
+    position: unset;
+    /* スティッキーをなくす設定 */
+    /* 同じ書式は必ず消す（下のセレクターの方が優先されるため） */
+  }
+
+  footer p.copyright {
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  nav li {
+    display: block;
+    /* ディスプレイにだけはアンセットを設定できない */
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  footer p.copyright span {
+    display: none;
+  }
+}

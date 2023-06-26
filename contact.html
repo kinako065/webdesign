@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- ※「！」を押してエンターを押すとセットが出てくる※ -->
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>お問い合わせ - WebDesign</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+
+    <!-- ※LynｋでどのＣＳＳを読み込むか設定する※ -->
+    <!-- ※リセットCSSはスタイルCSSより上に書く※ -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+
+
+</head>
+<body id="top">
+    <!-- [dibでグループ化] -->
+    <!-- クラス名は数字から始まるのはNG、英数字のみ -->
+    <div class="container">
+        <header>
+            <!-- ※コメント入れたい場合は、「control」+「／」を入れると表示されない※ -->
+            <!-- ※サイト名は大見出し（ｈ1）を設定する。※ -->
+            <!-- ※自動保存だけど保存したタイミングでコードがきれいになる　「control」+「S」※ -->
+            <!-- ※囲みたい文字を選択して。「Alt」+「W」で選択範囲を囲むことができる（（候補はでてこない））※ -->
+            <!-- ※「control」+「スペース」でタグを間違えた場合は候補が出てくる※ -->
+            <!-- ※行の入れ替え「Alt」「⇅矢印キー」※ -->
+            <!-- ※「shift」+「矢印」で行選択l※ -->
+            <!-- ※「Alt]+「tab」ブラウザ切り替え※ -->
+            <!-- ※ リンクは文字を選択して、「Alt」+「W」→「a」→””の中は「control」+「スペース」でリンク出す　リンク先未定の場合は「＃」を入れておく-->
+            <h1><a href="index.html">WebDesign</a></h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="next.html">下層ページの構成</a></li>
+                <li><a href="contact.html" class="active">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <!-- ［メインビジュアル］ -->
+        <!-- ※imgタグを使用するときは、山かっこを入れないで直接「img」といれる※ -->
+        <!-- ※ファイル選択は候補を必ず出すこと！！！　候補を出す時「control」+「スペース」※ -->
+        <!-- ※画像にも原稿としての意味（タグ）をつける→不明なものは「ｐ」をつける※ -->
+
+
+        <main>
+            <article>
+                <h1>お問い合わせ</h1>
+                <p>WebDesignについてのご質問・ご意見は、下記フォームよりお気軽にお問い合わせください。</p>
+                <aside>
+                    <ul>
+                        <li>必要事項を記入し、「送信」をクリックしてください。</li>
+                        <li>ご登録いただいた個人情報は、お問い合わせ内容の確認以外には使用いたしません。</li>
+                        <li>※は必須項目です。</li>
+                    </ul>
+                </aside>
+                <form action="#" method="post">
+                    <dl>
+                        <div>
+                            <dt>
+                                お名前<span>※</span>
+                            </dt>
+                            <dd>
+                                <input type="text" placeholder="ウェブデザ　花子" required>
+                                <!-- placeholderは入力例、 requiredは必須を表す -->
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>
+                                メールアドレス<span>※</span>
+                            </dt>
+                            <dd>
+                                <input type="email" placeholder="info@gmail.com" required>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>
+                                お問い合わせの種類
+                            </dt>
+                            <dd>
+                                <label>
+                                    <input type="radio" name="category" checked>
+                                    ご質問
+                                </label>
+                                <label>
+                                    <input type="radio" name="category">
+                                    お問い合わせ
+                                </label>
+                                <!-- nnameタグを設定することでどちらかの設定ができる -->
+                                <!-- labelタグでマークだけでなく文字を押しても反応するようになる -->
+                                <!-- チェックド属性は初期でチェック入ってる設定 -->
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>
+                                内容
+                            </dt>
+                            <dd>
+                                <textarea></textarea>
+
+                            </dd>
+                        </div>
+                    </dl>
+                    <p>
+                        <button>送信</button>
+                        <!-- 中にIMGタグ入れてもOK -->
+                    </p>
+                </form>
+
+
+            </article>
+        </main>
+        <footer>
+            <p class="pagetop"><a href="#top"><img src="img/gotop.svg" width="32" alt="ページトップへ"></a></p>
+            <p class="copyright"><small>
+                    &copy;2021 WebDesign.
+                    <span>All Rights Reserved.</span>
+                    <!-- 文字だけをグループ化（divタグの改行しない版） -->
+                </small></p>
+            <!-- ※©を変えるとき→選択して右クリック→コマンドパレット→「ｈｔｍｌ」と入力してエンター※ -->
+            <!-- ※「ｐ」の中に「small」を入れる！！！※ -->
+
+        </footer>
+    </div>
+</body>
+</html>
