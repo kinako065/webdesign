@@ -9,10 +9,15 @@
     <link rel="apple-touch-icon" href="favicon.png">
 
 
+
     <!-- ※LynｋでどのＣＳＳを読み込むか設定する※ -->
     <!-- ※リセットCSSはスタイルCSSより上に書く※ -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/footerFixed.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
 
 </head>
 <body id="top">
@@ -30,14 +35,15 @@
             <!-- ※「Alt]+「tab」ブラウザ切り替え※ -->
             <!-- ※ リンクは文字を選択して、「Alt」+「W」→「a」→””の中は「control」+「スペース」でリンク出す　リンク先未定の場合は「＃」を入れておく-->
             <h1><a href="index.html">WebDesign</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">HOME</a></li>
-                    <li><a href="next.html">下層ページの構成</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                </ul>
-            </nav>
         </header>
+        <button class="hmenu"><span></span></button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="next.html">下層ページの構成</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
 
         <!-- ［メインビジュアル］ -->
         <!-- ※imgタグを使用するときは、山かっこを入れないで直接「img」といれる※ -->
@@ -61,7 +67,7 @@
         </main>
     </div>
 
-    <footer>
+    <footer id="footer">
         <p class="pagetop"><a href="#top"><img src="img/gotop.svg" width="32" alt="ページトップへ"></a></p>
         <p class="copyright">
             <small>
@@ -73,5 +79,6 @@
         <!-- ※©を変えるとき→選択して右クリック→コマンドパレット→「ｈｔｍｌ」と入力してエンター※ -->
         <!-- ※「ｐ」の中に「small」を入れる！！！※ -->
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

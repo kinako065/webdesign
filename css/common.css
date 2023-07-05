@@ -147,6 +147,7 @@ footer p.pagetop {
   position: fixed;
   right: 12px;
   bottom: 9px;
+  display: none;
 }
 
 /* 不透明度:0.7 */
